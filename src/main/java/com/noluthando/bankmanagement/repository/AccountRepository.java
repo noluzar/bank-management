@@ -1,0 +1,11 @@
+package com.noluthando.bankmanagement.repository;
+
+import com.noluthando.bankmanagement.model.Account;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface AccountRepository extends JpaRepository<Account, Long> {
+    // You can add custom queries here if needed
+    Account findByAccountNumber(String accountNumber);
+}
